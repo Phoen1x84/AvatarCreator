@@ -1,13 +1,11 @@
 <template>
     <div>
-        <App/>
+        example ecec
     </div>
 </template>
 
 <script>
-import App from './../App.vue'
 export default {
-  name: "home",
   components: {}
 };
 </script>

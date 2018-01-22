@@ -1,6 +1,7 @@
 <template>
     <div class="canvas">
         <Float />
+        <!-- <avatar-canvas /> -->
         <TeaserTitle />
         <Email />
     </div>
@@ -9,12 +10,18 @@
 <script>
 import 'normalize.css';
 import './components/core/main.scss';
+import bus from './eventbus.js';
 import Float from './components/floats/index.vue';
 import TeaserTitle from './components/teaser-title/index.vue';
 import Email from './components/email-form/index.vue';
+
+// avatar creator
+import AvatarCanvas from './components/avatar/avatar-canvas.vue';
+
 export default {
     name: 'app',
     components: {
+        AvatarCanvas,
         Float,
         TeaserTitle,
         Email

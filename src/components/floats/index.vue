@@ -21,6 +21,7 @@ export default {
 .float {
   position: fixed;
   min-height: 100vh;
+  z-index: -1;
 
   &__item {
     animation: floating infinite ease-in-out;
@@ -39,8 +40,8 @@ export default {
       &:nth-child(#{$i}) {
         width: calc(30px * #{$i});
         height: calc(30px * #{$i});
-        animation-delay: $i * 0.05s;
-        animation-duration: $i * 1s;
+        animation-delay: $i * 0.1s;
+        animation-duration: $i * 3s;
         opacity: calc(0.5 / #{$i});
       }
     }
