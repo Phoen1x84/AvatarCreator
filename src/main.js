@@ -1,6 +1,6 @@
 import Vue from 'vue';
+Vue.prototype.$eventBus = new Vue();
 //import routes from './routes';
-import vm from './eventbus.js';
 import App from './App.vue';
 
 // const app = new Vue({

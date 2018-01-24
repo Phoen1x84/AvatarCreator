@@ -1,6 +1,8 @@
 <template>
   <div class="float">
-      <i class="float__item"></i>
+      <i class="float__item">
+        
+      </i>
       <i class="float__item"></i>
       <i class="float__item"></i>
       <i class="float__item"></i>

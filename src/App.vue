@@ -1,16 +1,15 @@
 <template>
     <div class="canvas">
         <Float />
-        <!-- <avatar-canvas /> -->
-        <TeaserTitle />
-        <Email />
+        <avatar-canvas />
+        <!-- <TeaserTitle />
+        <Email /> -->
     </div>
 </template>
 
 <script>
 import 'normalize.css';
 import './components/core/main.scss';
-import bus from './eventbus.js';
 import Float from './components/floats/index.vue';
 import TeaserTitle from './components/teaser-title/index.vue';
 import Email from './components/email-form/index.vue';

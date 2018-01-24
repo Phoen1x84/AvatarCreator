@@ -1,39 +1,31 @@
 <template>
   <div class="avatar-canvas">
       <div class="avatar">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                viewBox="0 0 68 68" style="enable-background:new 0 0 68 68;" xml:space="preserve">
-            <g id="Face">
-                <g>
-                    <circle class="st0" cx="34" cy="34" r="34"/>
-                </g>
-                <path class="st1" d="M37,43c0,1.7-1.3,3-3,3s-3-1.3-3-3s1.3-7,3-7S37,41.3,37,43z"/>
-            </g>
-            <g id="Mouth">
-                <path d="M40,51c0,0,0,6-6,6c-4.9,0-6-6-6-6"/>
-            </g>
-            <g id="Eyes">
-                <circle cx="20" cy="33" r="3"/>
-                <rect x="14" y="27" width="12" height="2"/>
-                <rect x="41" y="27" width="12" height="2"/>
-                <circle cx="47" cy="33" r="3"/>
-            </g>
-            <g id="Hair">
-                <path class="st2" d="M2,22l31,6l-2-6l37,11c0,0,1-33-32-33S2,22,2,22z"/>
-            </g>
-            </svg>
-        </div>          
-        {{color}}
-        <avatar-options />
+           <svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+              <title>face</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="face">
+                      <circle id="Oval-3" fill="#FCDAC6" cx="64" cy="64" r="64"></circle>
+                      <path d="M73,84.8026243 C73,89.882151 68.97052,94 64,94 C59.02948,94 55,89.882151 55,84.8026243 C55,77.7311301 64,70 64,70 C64,70 73,77.7311301 73,84.8026243 Z" id="Fill-1" fill="#F9BAAD"></path>
+                      <g id="eyes" transform="translate(31.000000, 64.000000)" fill="#09333F">
+                          <path d="M0,6 C0,2.6862915 2.6862915,0 6,0 C9.3137085,0 12,2.6862915 12,6 C12,7.09286143 12,10.9071386 12,12 C12,15.3137085 9.3137085,18 6,18 C2.6862915,18 0,15.3137085 0,12 C0,10.9071386 0,7.09286143 0,6 Z" id="Combined-Shape"></path>
+                          <path d="M54,6 C54,2.6862915 56.6862915,0 60,0 C63.3137085,0 66,2.6862915 66,6 C66,7.09286143 66,10.9071386 66,12 C66,15.3137085 63.3137085,18 60,18 C56.6862915,18 54,15.3137085 54,12 C54,10.9071386 54,7.09286143 54,6 Z" id="Combined-Shape"></path>
+                      </g>
+                      <path d="M64,116 C57.372583,116 52,110.627417 52,104 C52,104 76,104 76,104 C76,110.627417 70.627417,116 64,116 Z M52,102 L76,102 L76,104 L52,104 L52,102 Z" id="Combined-Shape" fill="#09333F"></path>
+                  </g>    
+                  <g v-html="hair" />
+              </g>
+          </svg>
+          <avatar-options />
+      </div>
   </div>
 </template>
 
 <script>
-import bus from './../../eventbus.js';
 import AvatarOptions from "./avatar-options.vue";
-bus.$on('update', function(msg) {
-            console.log(`${msg} test`)
-        })
 export default {
   name: "avatar-canvas",
   components: {
@@ -41,32 +33,44 @@ export default {
   },
   data() {
     return {
-      color: "default"
-    };
+      hair: ''
+    }
+  },
+  created() {
+    this.$eventBus.$on('update', this.colorChange);
   },
   methods: {
-    update: function() {
-       
-    },
+    colorChange: function(svgCode) {
+      this.hair = svgCode;
+    }
   }
 };
 </script>
 
 <style lang="scss">
 .avatar {
-  width: 220px;
-  height: 220px;
+  width: 128px;
+  height: 128px;
   z-index: 1;
 }
 
-.st0 {
-  fill: #fddac7;
+#eyes {
+  > path {
+    animation: blink 2.4s infinite;
+  }
 }
-.st1 {
-  fill: #f9baad;
-}
-.st2 {
-  fill: #9e4a05;
+
+@keyframes blink {
+  90% {
+    transform: none;
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(15px) scaleY(0);
+  }
+  100% {
+    animation-timing-function: ease-out;
+  }
 }
 </style>
 
