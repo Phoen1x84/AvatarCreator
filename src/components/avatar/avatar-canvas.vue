@@ -16,11 +16,11 @@
                       </g>
                       <path d="M64,116 C57.372583,116 52,110.627417 52,104 C52,104 76,104 76,104 C76,110.627417 70.627417,116 64,116 Z M52,102 L76,102 L76,104 L52,104 L52,102 Z" id="Combined-Shape" fill="#09333F"></path>
                   </g>    
-                  <g v-html="hair" />
+                  <g v-html="hair" />                  
               </g>
           </svg>
-          <avatar-options />
       </div>
+      <avatar-options />
   </div>
 </template>
 
@@ -52,6 +52,7 @@ export default {
   width: 128px;
   height: 128px;
   z-index: 1;
+  margin: 0 auto 40px;
 }
 
 #eyes {
