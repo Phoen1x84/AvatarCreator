@@ -15,6 +15,10 @@ const routes = [
     { path: '/404', name: '404', component: NotFound }
 ];
 
+/*
+    initiate vue routing,
+    without this use function routing would not work 
+*/
 Vue.use(VueRouter);
 
 const router = new VueRouter({

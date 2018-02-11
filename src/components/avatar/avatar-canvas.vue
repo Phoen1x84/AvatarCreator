@@ -21,17 +21,21 @@
               </g>
           </svg>
       </div>
-      <avatar-options />
+      <AvatarOptions />
+      <CtaButton text="Previous page" href="/" class="btn btn--back" />
+      <CtaButton text="Save this avatar?" href="/confirm" />
   </div>
   </div>
 </template>
 
 <script>
+import CtaButton from "./../cta-button/button.vue";
 import AvatarOptions from "./avatar-options.vue";
 export default {
   name: "avatar-canvas",
   components: {
-    AvatarOptions
+    AvatarOptions,
+    CtaButton
   },
   data() {
     return {

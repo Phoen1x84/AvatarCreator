@@ -132,6 +132,7 @@ export default {
   justify-content: center;
   flex-wrap: wrap;
   max-width: 420px;
+  margin: 0 0 20px;
 
   &__input {
     position: absolute;
