@@ -1,10 +1,9 @@
 <template>
-    <div class="configure-group">
-        <div class="configure-group__item"> 
-            <label for="radio" class="configure-group__title">
+    <div class="configure-group">        
+            <input type="radio" class="configure-group__input" id="item1" name="x" /> 
+            <label for="item1" class="configure-group__title">
                 Hair
             </label>
-            <input type="radio" class="configure-group__input" id="item1" name="x" checked /> 
             <div class="configure-group__options">
                 <div class="configure-option" v-for="item in options" :key="item.id">
                     <input
@@ -36,30 +35,29 @@
                 </div>
             </div>
 
-            <label for="radio" class="configure-group__title">
+            <input type="radio" class="configure-group__input" id="item2" name="x" />    
+            <label for="item2" class="configure-group__title">
                 eyes
             </label>
-            <input type="radio" class="configure-group__input" id="item2" name="x" />    
             <div class="configure-group__options">       
                 <div class="configure-option"></div>
             </div>
 
-            <label for="radio" class="configure-group__title">
+            <input type="radio" class="configure-group__input" id="item3" name="x" />   
+            <label for="item3" class="configure-group__title">
                 mouth
             </label>
-            <input type="radio" class="configure-group__input" id="item3" name="x" />   
             <div class="configure-group__options">        
                 <div class="configure-option"></div>
             </div>
 
-            <label for="radio" class="configure-group__title">
+            <input type="radio" class="configure-group__input" id="item4" name="x" />
+            <label for="item4" class="configure-group__title">
                 face
             </label>
-            <input type="radio" class="configure-group__input" id="item4" name="x" />
             <div class="configure-group__options">           
                 <div class="configure-option"></div>
             </div>
-        </div>
     </div>
 </template>
 
@@ -133,37 +131,82 @@ export default {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  flex-direction: row;
+  max-width: 420px;
 
-  &__item {
-    display: flex;
+  &__input {
+    position: absolute;
+    clip: rect(0, 0, 0);
+    width: 0;
+    height: 0;
+
+    &:checked {
+      + .configure-group__title {
+        background: #9068be;
+        color: #fff;
+
+        &:after {
+          display: block;
+        }
+
+        + .configure-group__options {
+          display: flex;
+        }
+      }
+    }
   }
 
   &__title {
-  }
+    background: #e1e8f0;
+    padding: 20px;
+    order: 1;
+    position: relative;
+    transition: background 0.5s ease-in-out;
 
-  &__input {
-    &:checked + .configure-group__options {
-      display: block;
+    &:hover {
+      background: darken(#e1e8f0, 10%);
+    }
+
+    &:after {
+      display: none;
+      top: 28px;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(110, 211, 207, 0);
+      border-bottom-color: #6ed3cf;
+      border-width: 30px;
+      margin-left: -30px;
     }
   }
 
   &__options {
-      display: none;
+    border-radius: 10px;
+    background: #6ed3cf;
+    display: none;
+    width: 100%;
+    margin-top: 30px;
+    padding: 20px;
+    order: 2;
+    justify-content: center;
   }
 }
 
 .configure-option {
-  background: #f1f1f1;
+  background: #fff;
   position: relative;
   width: 62px;
   height: 62px;
-  margin: 0 1px;
-
+  margin: 0 5px;
+  svg {
+    transition: transform 0.5s cubic-bezier(0.75, -0.5, 0, 1.75);
+  }
   &:hover {
     svg {
-      transform: translateY(-10px);
-      transition: transform 0.5s cubic-bezier(0.75, -0.5, 0, 1.75);
+      transform: translateY(-5px);
     }
   }
 

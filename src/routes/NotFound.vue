@@ -6,6 +6,9 @@
 
 <script>
 export default {
-  components: {}
+  name: "notFound",
+  data() {
+    return {};
+  }
 };
 </script>

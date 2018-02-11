@@ -21,7 +21,8 @@
   "homepage": "https://github.com/Phoen1x84/AvatarCreator#readme",
   "dependencies": {
     "normalize.css": "^7.0.0",
-    "vue": "^2.5.13"
+    "vue": "^2.5.13",
+    "vue-router": "^3.0.1"
   },
   "browserslist": [
     "> 1%",

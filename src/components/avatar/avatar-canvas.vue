@@ -1,4 +1,5 @@
 <template>
+<div class="canvas">
   <div class="avatar-canvas">
       <div class="avatar">
            <svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -21,6 +22,7 @@
           </svg>
       </div>
       <avatar-options />
+  </div>
   </div>
 </template>
 

@@ -1,31 +1,27 @@
 import Vue from 'vue';
+import VueRouter from 'vue-router';
 Vue.prototype.$eventBus = new Vue();
-//import routes from './routes';
+
+import Home from './routes/Home';
+import Configuration from './routes/Configuration';
+import Confirm from './routes/Confirm';
+import NotFound from './routes/NotFound';
 import App from './App.vue';
 
-// const app = new Vue({
-//     el: '#app',
-//     data: {
-//         currentRoute: window.location.pathname
-//     },
-//     computed: {
-//         ViewComponent() {
-//             const matchingView = routes[this.currentRoute];
-//             return matchingView
-//                 ? require('./pages/' + matchingView + '.vue')
-//                 : require('./pages/404.vue');
-//         }
-//     },
-//     render(h) {
-//         return h(this.VueComponent)
-//     }
-// })
+const routes = [
+    { path: '/', name: '', component: Home },
+    { path: '/configuration', name: 'configuration', component: Configuration },
+    { path: '/confirm', name: 'confirm', component: Confirm },
+    { path: '/404', name: '404', component: NotFound }
+];
 
-// window.addEventListener('popstate', () => {
-//     app.currentRoute = window.location.pathname
-// })
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+    routes
+});
 
 const app = new Vue({
-    el: '#app',
+    router,
     render: h => h(App)
-});
+}).$mount('#app')

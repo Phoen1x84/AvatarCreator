@@ -1,6 +1,6 @@
 <template>
     <div class="email-form">
-        <form v-bind:action="redirectUrl" method="post" class="form">
+        <form class="form" method="POST" v-on:submit="onSubmit">
             <div class="field-group">
                 <label for="email" class="field-group__label">
                     {{labelText}}
@@ -22,9 +22,14 @@ export default {
     return {
       labelText: "Email Address",
       placeholder: "enter your email address",
-      buttonText: "Create now",
-      redirectUrl: "/"
+      buttonText: "Create now"
     };
+  },
+  methods: {
+    onSubmit: function(e) {
+      e.preventDefault();
+      this.$router.push('/configuration');
+    }
   }
 };
 </script>
