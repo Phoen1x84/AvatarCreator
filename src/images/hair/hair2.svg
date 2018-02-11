@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>hair2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hair2" fill="#09333F">
+            <path d="M18.0375142,32 C28.1570833,17.4921272 44.9700391,8 64,8 C83.0299609,8 99.8429167,17.4921272 109.962486,32 L18.0375142,32 Z" id="Combined-Shape" opacity="0.0399999991"></path>
+            <path d="M8,64 C8,33.072054 33.072054,8 64,8 C94.927946,8 120,33.072054 120,64 L128,64 C128,28.653776 99.346224,0 64,0 C28.653776,0 0,28.653776 0,64 L8,64 Z" id="Oval-11" fill-rule="nonzero" opacity="0.04"></path>            
+        </g>
+    </g>
+</svg>
