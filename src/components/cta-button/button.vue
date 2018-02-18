@@ -2,7 +2,7 @@
     <div v-bind:class="className">
         <router-link v-bind:to="href" class="btn__link">        
             {{text}}
-        </router-link>        
+        </router-link>     
     </div>
 </template>
 

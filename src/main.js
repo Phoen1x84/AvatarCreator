@@ -19,6 +19,7 @@ const routes = [
     initiate vue routing,
     without this use function routing would not work 
 */
+
 Vue.use(VueRouter);
 
 const router = new VueRouter({
