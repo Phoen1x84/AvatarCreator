@@ -40,6 +40,8 @@ export default {
     //this.$eventBus.$on("updateMouth", this.changeMouth);
   },
   methods: {
+    // TODO: each feature e.g. eyes, mouth etc... can be broken out into individual components
+    // to keep the code light weight
     changeFace: function(svgCode) {
       this.face = svgCode;
     },
