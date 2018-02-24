@@ -58,7 +58,7 @@
                 {
                     "id": "0",
                     "labelText": "eyes 1",
-                    "svgCode": "",
+                    "svgCode": "<g id='eyes1' fill='#09333F'><g id='Group-5' transform='translate(31.000000, 64.000000)'><path d='M0,6 C0,2.6862915 2.6862915,0 6,0 C9.3137085,0 12,2.6862915 12,6 C12,7.09286143 12,10.9071386 12,12 C12,15.3137085 9.3137085,18 6,18 C2.6862915,18 0,15.3137085 0,12 C0,10.9071386 0,7.09286143 0,6 Z' id='Combined-Shape'></path><path d='M54,6 C54,2.6862915 56.6862915,0 60,0 C63.3137085,0 66,2.6862915 66,6 C66,7.09286143 66,10.9071386 66,12 C66,15.3137085 63.3137085,18 60,18 C56.6862915,18 54,15.3137085 54,12 C54,10.9071386 54,7.09286143 54,6 Z' id='Combined-Shape'></path></g> </g>",
                     "image": "/images/eyes/eyes1.svg",
                     "imageAlt": "eyes 1",
                     "fieldType": "radio",
@@ -67,7 +67,7 @@
                 {
                     "id": "1",
                     "labelText": "eyes 2",
-                    "svgCode": "",
+                    "svgCode": "<g id='eyes2' fill='#09333F' fill-rule='nonzero'><g id='Group' transform='translate(27.000000, 68.000000)'><path d='M24,10 L16,10 C16,6.6862915 13.3137085,4 10,4 C6.6862915,4 4,6.6862915 4,10 L-4,10 C-4,2.2680135 2.2680135,-4 10,-4 C17.7319865,-4 24,2.2680135 24,10 Z' id='Oval-3'></path><path d='M78,10 L70,10 C70,6.6862915 67.3137085,4 64,4 C60.6862915,4 58,6.6862915 58,10 L50,10 C50,2.2680135 56.2680135,-4 64,-4 C71.7319865,-4 78,2.2680135 78,10 Z' id='Oval-3'></path></g>",
                     "image": "images/eyes/eyes2.svg",
                     "imageAlt": "eyes 1",
                     "fieldType": "radio",
@@ -76,7 +76,7 @@
                 {
                     "id": "2",
                     "labelText": "eyes 3",
-                    "svgCode": "",
+                    "svgCode": "<g id='eyes3' fill='#09333F'><g id='Group-5' transform='translate(31.000000, 70.000000)'><circle id='Oval' cx='6' cy='6' r='6'></circle><circle id='Oval' cx='60' cy='6' r='6'></circle></g></g>",
                     "image": "./images/eyes/eyes3.svg",
                     "imageAlt": "eyes 3",
                     "fieldType": "radio",
@@ -90,30 +90,21 @@
             "options": [
                 {
                     "id": "0",
-                    "labelText": "eyes 1",
-                    "svgCode": "",
-                    "image": "/images/eyes/eyes1.svg",
-                    "imageAlt": "eyes 1",
+                    "labelText": "mouth 1",
+                    "svgCode": "<g id='mouth1' fill='#09333F'><path d='M64,116 C57.372583,116 52,110.627417 52,104 C52,104 76,104 76,104 C76,110.627417 70.627417,116 64,116 Z M52,102 L76,102 L76,104 L52,104 L52,102 Z' id='Combined-Shape'></path></g>",
+                    "image": "/images/eyes/mouth1.svg",
+                    "imageAlt": "mouth 1",
                     "fieldType": "radio",
-                    "name": "eyes"
+                    "name": "mouth"
                 },
                 {
                     "id": "1",
-                    "labelText": "eyes 2",
-                    "svgCode": "",
-                    "image": "images/eyes/eyes2.svg",
-                    "imageAlt": "eyes 1",
+                    "labelText": "mouth 2",
+                    "svgCode": "<g id='mouth2' fill='#09333F'><circle id='Oval-2' cx='64' cy='109' r='7'></circle></g>",
+                    "image": "images/eyes/mouth2.svg",
+                    "imageAlt": "mouth 1",
                     "fieldType": "radio",
-                    "name": "eyes"
-                },
-                {
-                    "id": "2",
-                    "labelText": "eyes 3",
-                    "svgCode": "",
-                    "image": "./images/eyes/eyes3.svg",
-                    "imageAlt": "eyes 3",
-                    "fieldType": "radio",
-                    "name": "eyes"
+                    "name": "mouth"
                 }
             ]
         }

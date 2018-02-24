@@ -34,6 +34,7 @@ export default {
   display: inline-flex;
   color: #fff;
   transition: background 0.25s ease-in-out;
+  margin: 0 10px;
 
   &:hover {
     background: lighten(#41b883, 10%);
