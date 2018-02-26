@@ -5,7 +5,7 @@
                 <label for="email" class="field-group__label">
                     {{labelText}}
                 </label>
-                <input id="email" class="field-group__email-input" type="email" v-bind:placeholder="placeholder" value="" />
+                <input id="email" class="field-group__email-input" type="email" v-bind:placeholder="placeholder" value="" required />
             </div>
             <div class="field-group field-group--inline">
                 <a href="#" class="field-group__link">link here</a>
@@ -26,8 +26,19 @@ export default {
     };
   },
   methods: {
+    queryDom: function(selector) {
+      return document.querySelector(selector);
+    },
+    inputValue: function(el) {
+      return el.value;
+    },
+    storeEmail: function() {
+      const emailValue = this.inputValue(this.queryDom('.field-group__email-input'));
+      localStorage.setItem("email", emailValue);
+    },
     onSubmit: function(e) {
       e.preventDefault();
+      this.storeEmail();
       this.$router.push('/configuration');
     }
   }
